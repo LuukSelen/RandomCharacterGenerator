@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Single Category{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="content-wrapper">
+        <div class="breadcrumbs">-|<a href="/"> Home </a>><a href="/all-categories"> Categories </a> > {{ name }} |-</div>
+        <div class="content-container">
+            <h1 style="display:none;">Check out all these amazing {{ name }}</h1>
+            <table>
+                <tr>
+                    <th>{{ name }}</th>
+                </tr>
+                {% for a in attr %}
+                    <tr>
+                        {% if link_cell %}
+                            <td class="link-cell">
+                                <a href="https://www.google.com/search?q={{a}}" target="_blank">{{a}}</a>
+                            </td>
+                        {% else %}
+                            <td>{{a}}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

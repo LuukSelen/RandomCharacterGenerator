@@ -1,0 +1,28 @@
+{% block header %}
+<header>
+    <div class="header-left">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-item-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="/all-categories">Categories</a>
+                <ul class="nav-item-menu">
+                    <li class="menu-item"><a href="/ages">Ages</a></li>
+                    <li class="menu-item"><a href="/races">Races</a></li>
+                    <li class="menu-item"><a href="/countries">Countries</a></li>
+                    <li class="menu-item"><a href="/classes">Classes</a></li>
+                    <li class="menu-item"><a href="/titles">Titles</a></li>
+                    <li class="menu-item"><a href="/traits">Traits</a></li>
+                    <li class="menu-item"><a href="/backstories">Backstories</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="header-right">
+        <a href="/">
+            <img src="{{ url_for('static', filename='img/awesome-generator-logo.png') }}" alt="Log Awesome Generator">
+        </a>
+    </div>
+</header>
+{% endblock %}

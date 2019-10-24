@@ -1,0 +1,49 @@
+table {
+    margin:2.5rem 0;
+    width:100%;
+}
+table, th, td {
+    border: .1rem solid black;
+    border-collapse: collapse;
+}
+
+table tr td:first-of-type {
+    width:10rem;
+}
+
+th, td {
+    padding: 1.25rem 1rem;
+    text-align: left;
+    font-size:1.5rem;
+}
+
+th, td a {
+    text-decoration:none;
+    color:black;
+}
+
+.link-cell {
+    padding:0;
+}
+
+.link-cell a {
+    padding: 1.25rem 1rem;
+    height:100%;
+    width:100%;
+    display: block;
+}
+
+th, td a:hover {
+    text-decoration: underline;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table th {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,110 @@
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:var(--header-height);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:.5rem 2.5rem;
+    box-shadow: 0rem .5rem .5rem -.3rem rgba(0,0,0,0.25);
+    background-color:white;
+}
+
+header .header-left ul.nav {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+}
+
+header .header-left ul.nav li.nav-item {
+    position:relative;
+    margin:0 1.5rem 0;
+    font-size:2rem;
+}
+
+header .header-left ul.nav li.nav-item:hover ul.nav-item-menu {
+    visibility: visible;
+    opacity:1;
+}
+
+header .header-left ul.nav li.nav-item a.nav-item-link {
+    color:var(--dark-orange);
+    text-decoration:none;
+    position:relative;
+}
+
+header .header-left ul.nav li.nav-item a.nav-item-link:after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2rem;
+    background-color:var(--dark-blue);
+    transition:var(--trnsit);
+}
+
+header .header-left ul.nav li.nav-item a.nav-item-link:hover {
+    color:var(--dark-orange-hover);
+    transition:var(--trnsit);
+}
+
+header .header-left ul.nav li.nav-item a.nav-item-link:hover:after{
+    width:100%;
+}
+
+header .header-left ul.nav li.nav-item ul.nav-item-menu {
+    list-style-type:none;
+    margin:0;
+    padding:.5rem 0;
+    position:absolute;
+    top:calc(100% + .6rem);
+    left:0;
+    border-radius:.2rem;
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.1);
+    background-color:var(--lightest-orange);
+    width:15rem;
+    transition: var(--trnsit);
+    visibility: hidden;
+    opacity:0;
+}
+
+header .header-left ul.nav li.nav-item ul.nav-item-menu li.menu-item {
+    transition:var(--trnsit);
+    border-left:0rem solid white;
+    padding:.5rem 1.5rem;
+    font-size:1.8rem;
+}
+
+header .header-left ul.nav li.nav-item ul.nav-item-menu li.menu-item:hover {
+    border-left:.5rem solid var(--dark-blue);
+}
+
+header .header-left ul.nav li.nav-item ul.nav-item-menu li.menu-item:hover a {
+    color:var(--dark-orange-hover);
+}
+
+header .header-left ul.nav li.nav-item ul.nav-item-menu li.menu-item a {
+    color:var(--dark-orange);
+    text-decoration:none;
+}
+
+
+header .header-right {
+    position:relative;
+    height:100%;
+}
+
+header .header-right a {
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+header .header-right a img {
+    height:14rem;
+}

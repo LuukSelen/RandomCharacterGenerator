@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="content-wrapper">
+        <div class="breadcrumbs">-| Home |-</div>
+        <div class="content-container">
+            <h1>Welcome to the Awesome, Amazing, Totally Custom, and Unique Character Generator!</h1>
+            <div class="generator-wrapper">
+                <div class="button-container">
+                    <button onClick="window.location.reload();">Re-re-re-re-randomize!</button>
+                </div>
+                <table>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Generated Content</th>
+                    </tr>
+                    {% for a, b in attributes %}
+                        <tr>
+                            <td>{{a}}</td>
+                            <td>{{b}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

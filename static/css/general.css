@@ -1,0 +1,35 @@
+:root {
+    --fira-sans: 'Fira Sans', sans-serif;
+
+    --dark-orange:hsl(25, 78%, 51%);
+    --dark-orange-hover:hsl(25, 78%, 41%);
+    --dark-blue:hsl(188, 91%, 32%);
+    --light-blue:hsl(184, 41%, 57%);
+    --light-blue-hover:hsl(184, 41%, 37%);
+    --lightest-blue:hsl(184, 41%, 97%);
+    --light-orange:hsl(25, 77%, 71%);
+    --lightest-orange:hsl(25, 77%, 96%);
+
+    --trnsit:.25s;
+
+    --header-height:7rem;
+}
+
+* {
+    box-sizing: border-box;
+    font-family:var(--fira-sans);
+}
+
+html {
+    margin:0;
+    min-height: 100%;
+    font-size:10px;
+}
+
+body {
+    background-color:var(--lightest-blue);
+    margin:var(--header-height) 0 0;
+    display: flex;
+    flex-flow: column;
+    height: calc(100vh - var(--header-height));
+}
