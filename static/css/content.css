@@ -51,10 +51,30 @@ ul.category-container li a:hover {
 
 .generator-wrapper .button-container {
     display:flex;
-    justify-content:center;;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-.generator-wrapper button {
+.generator-wrapper .button-container .input-container {
+    width:100%;
+}
+
+.generator-wrapper .button-container .input-container p {
+    font-size:1.6rem;
+    text-align:center;
+}
+
+
+.generator-wrapper .button-container .input-container form {
+    display:flex;
+    justify-content: center;
+}
+
+.generator-wrapper .button-container .input-container form input[type=submit]::placeholder {
+    font-size:1.6rem;
+}
+
+.button {
     background-color:var(--light-blue);
     border:none;
     border-radius:.2rem;

@@ -6,7 +6,7 @@
     # Add your own stuff! Think about what information can be added to make the NPC feel more alive (eye-color, hair-color, weight, maybe pets?)
     # Present this information using Flask templating to generate HTML and CSS
 # The url should take an optional URL parameter that specifies the first name of the NPC. I.e. : http://127.0.0.1:5000?name=Hans should return an NPC with the first name "Hans" 
- 
+
 # Tips:
     # Want to know more about flask routing? -> https://flask.palletsprojects.com/en/1.1.x/quickstart/#routing
     # Want to know how to use templates to generate HTML? -> https://flask.palletsprojects.com/en/1.1.x/quickstart/#rendering-templates

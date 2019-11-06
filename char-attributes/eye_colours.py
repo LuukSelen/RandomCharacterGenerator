@@ -14,7 +14,7 @@ eye_colour = (
     'Pale Green',
     'Pale Gray',
     'Deep Blue',
-    'Violet Red',
+    'Violet',
     'Orange',
     'Spring Green',
     'Sea Green',

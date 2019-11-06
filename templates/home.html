@@ -10,7 +10,15 @@
             <h1>Welcome to the Awesome, Amazing, Totally Custom, and Unique Character Generator!</h1>
             <div class="generator-wrapper">
                 <div class="button-container">
-                    <button onClick="window.location.reload();">Re-re-re-re-randomize!</button>
+                    <button class="button" onClick="window.location.reload();">Re-re-re-re-randomize!</button>
+                    <div class="input-container">
+                        <p>Or use a First Name of your own!</p>
+                        <p> (url/?name=&lt;name&gt; works aswell)
+                        <form method="POST">
+                            <input name="text" placeholder="First Name">
+                            <input class="button" type="submit">
+                        </form>
+                    </div>
                 </div>
                 <table>
                     <tr>

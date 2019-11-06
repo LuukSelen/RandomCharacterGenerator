@@ -1,6 +1,6 @@
 import random
 import names
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 import sys
 sys.path.insert(0, 'char-attributes')
@@ -20,10 +20,19 @@ from eye_colours import eye_colour as eye_colours_attr
 app = Flask(__name__)
 link_cell = True
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
+    
+    if request.method == 'POST':
+        searchword = request.form['text']
+    else:
+        searchword = request.args.get('name', '')
+    if searchword:
+        first_name = searchword
+    else:
+        first_name = random.choice(fantasy_names_attr)
     attributes = {
-        'First Name': random.choice(fantasy_names_attr),
+        'First Name': first_name,
         'Last Name': random.choice(fantasy_names_attr),
         'Title': random.choice(titles_attr),
         'Class': random.choice(occupations_attr),
@@ -42,6 +51,12 @@ def home():
         'Flavour 3': random.choice(backstories_attr),
     }
     return render_template('home.html', attributes = attributes.items())
+
+# @app.route('/', methods=['POST'])
+# def my_form_post():
+#     text = request.form['text']
+#     processed_text = text.upper()
+#     return processed_text
 
 @app.route('/all-categories')
 def all_categories():
